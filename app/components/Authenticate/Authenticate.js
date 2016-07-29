@@ -8,12 +8,12 @@ Authenticate.propTypes = {
   onAuth: PropTypes.func.isRequired
 }
 
-export default function Authenticate ({onAuth, isFetching, err}) {
+export default function Authenticate ({onAuth, isFetching, error}) {
   return (
     <div className={centeredContainer}>
       <h1 className={largeHeader}>{'Authenticate'}</h1>
       <FacebookAuthButton isFetching={isFetching} onAuth={onAuth} />
-      {err ? <p className={errorMsg}>{err}</p> : null}
+      {error ? <p className={errorMsg}>{error}</p> : null}
     </div>
   )
 }
